@@ -1,13 +1,64 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <title>Worst way to do it.</title>
+    <script src="Scripts/jquery-1.8.2.min.js"></script>
 </head>
    <body>
       <a href="index.html">Back to Demo</a>
       <h1>Worst</h1>
       <h4>Mix all the javascript in with the html.</h4>
       <h2 class="message"></h2>
+      
+         <script>
+            var loggingEnabled = true;
+            var messages = [
+               'Hello',
+               'Howdy',
+               'Hi',
+               'Sup Yo'
+            ];
+
+            ////Logging
+            if (!window.console || typeof window.console === "undefined") {
+               window.console = {
+                  log: function (logMessage) {
+                  }
+               };
+            }
+
+            var formatMessage = function (message) {
+               var date = new Date().toLocaleTimeString();
+               return date + ": " + message;
+            };
+
+            var log = function (message) {
+               if (loggingEnabled)
+                  console.log(formatMessage(message));
+            };
+
+            ///Random
+            var randomBetween = function (a, b) {
+               return Math.floor((Math.random() * (b - a + 1))) + a;
+            };
+
+            var pickRandom = function (list) {
+               var index = randomBetween(0, list.length - 1);
+               return list[index];
+            };
+
+            ///MessageGenerator
+            var getMessage = function () {
+               return pickRandom(messages);
+            };
+
+            ///
+            $(function () {
+               log("Adding message");
+               $('.message').text(getMessage());
+               log("Message added");
+            });
+   </script>
 
    </body>
 </html>
