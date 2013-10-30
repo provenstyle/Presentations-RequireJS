@@ -189,11 +189,17 @@
     <Content Include="bad.html" />
     <Content Include="better.html" />
     <Content Include="myIdeal.html" />
-    <Content Include="Scripts\app\config.js" />
-    <Content Include="Scripts\app\logger.js" />
-    <Content Include="Scripts\app\main.js" />
-    <Content Include="Scripts\app\messageGenerator.js" />
-    <Content Include="Scripts\app\random.js" />
+    <Content Include="Scripts\better\badMessages.js" />
+    <Content Include="Scripts\better\config.js" />
+    <Content Include="Scripts\better\logger.js" />
+    <Content Include="Scripts\better\main.js" />
+    <Content Include="Scripts\better\messageGenerator.js" />
+    <Content Include="Scripts\better\random.js" />
+    <Content Include="Scripts\ideal\config.js" />
+    <Content Include="Scripts\ideal\logger.js" />
+    <Content Include="Scripts\ideal\main.js" />
+    <Content Include="Scripts\ideal\messageGenerator.js" />
+    <Content Include="Scripts\ideal\random.js" />
     <Content Include="Scripts\bad\badMessages.js" />
     <Content Include="Scripts\bad\config.js" />
     <Content Include="Scripts\bad\logger.js" />
@@ -239,7 +245,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\better\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
