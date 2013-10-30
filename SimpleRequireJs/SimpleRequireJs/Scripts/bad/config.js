@@ -1,0 +1,1 @@
+﻿var loggingEnabled = true;
